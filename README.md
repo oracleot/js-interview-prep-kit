@@ -1,6 +1,6 @@
 # JavaScript Interview Questions with Solutions
 
-## Top 37 from [Toptal](https://www.toptal.com/javascript/interview-questions)
+## JavaScript Fundamentals
 
 ### 1.
 **Question**  
@@ -790,3 +790,9 @@ The browser has an event loop which checks the event queue and processes pending
 Similarly, `setTimeout()` also puts execution of its referenced function into the event queue if the browser is busy.
 
 When a value of zero is passed as the second argument to `setTimeout()`, it attempts to execute the specified function “as soon as possible”. Specifically, execution of the function is placed on the event queue to occur on the next timer tick. Note, though, that this is not immediate; the function is not executed until the next tick. That’s why in the above example, the call to `console.log(4)` occurs before the call to `console.log(3)` (since the call to `console.log(3)` is invoked via `setTimeout`, so it is slightly delayed).
+
+
+
+### References
+
+[Toptal's 37 Essential JavaScript Interview Questions](https://www.toptal.com/javascript/interview-questions)
