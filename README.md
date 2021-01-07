@@ -2,7 +2,7 @@
 
 #### Yeah, I know JavaScript…
 
-As with any technology, there’s knowing ** JavaScript development ** and then there’s really knowing ** JavaScript **.
+As with any technology, there’s knowing **JavaScript development** and then there’s really knowing **JavaScript**.
 
 I my quest to REALLY master JavaScript, I decided to source for interview questions and create a pool of questions for my personal reference and for anyone interested.
 
