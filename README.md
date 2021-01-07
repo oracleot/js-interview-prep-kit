@@ -1,8 +1,6 @@
 # JavaScript Interview Questions with Solutions
 
-## Questions on Data Structures & Algorithm
-
-https://medium.com/@shinjukudev/algorithm-interview-questions-and-answers-js-c44f0872b9b2
+## Data Structures & Algorithm
 
 ### Arrays
 One of the most common data structures in programming. These questions are those involving arrays.
@@ -214,3 +212,8 @@ To simplify, the input array will not have duplicates. However, there will be ne
 
     const arr7 = [1,5,6,1,0,1];
     // findSumPairs(arr7, 6)
+
+
+### References
+
+- https://medium.com/@shinjukudev/algorithm-interview-questions-and-answers-js-c44f0872b9b2
