@@ -1,5 +1,6 @@
 # JavaScript Interview Questions with Solutions
 
+**JavaScript Fundamentals** | [Data Structures & Algorithm](https://github.com/oracleot/js-interview-prep-kit/tree/data-structure)
 ## JavaScript Fundamentals
 
 ### 1.
