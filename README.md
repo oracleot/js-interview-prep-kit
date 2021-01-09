@@ -1,5 +1,6 @@
 # JavaScript Interview Questions with Solutions
 
+**Data Structures & Algorithm** | [JavaScript Fundamentals](https://github.com/oracleot/js-interview-prep-kit/tree/javascript-fundamentals)
 ## Data Structures & Algorithm
 
 ### Arrays
