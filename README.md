@@ -790,7 +790,64 @@ The browser has an event loop which checks the event queue and processes pending
 Similarly, `setTimeout()` also puts execution of its referenced function into the event queue if the browser is busy.
 
 When a value of zero is passed as the second argument to `setTimeout()`, it attempts to execute the specified function “as soon as possible”. Specifically, execution of the function is placed on the event queue to occur on the next timer tick. Note, though, that this is not immediate; the function is not executed until the next tick. That’s why in the above example, the call to `console.log(4)` occurs before the call to `console.log(3)` (since the call to `console.log(3)` is invoked via `setTimeout`, so it is slightly delayed).
+    false
 
+### 31.
+**Question**  
+
+Write a simple function (less than 160 characters) that returns a boolean indicating whether or not a string is a palindrome
+    
+**Answer**
+
+The following one line function will return `true` if `str` is a palindrome; otherwise, it returns false.
+
+    function isPalindrome(str) {
+        str = str.replace(/\W/g, '').toLowerCase();
+        return (str == str.split('').reverse().join(''));
+    }
+    console.log(isPalindrome("level"));                   // logs 'true'
+    console.log(isPalindrome("levels"));                  // logs 'false'
+    console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
+
+### 32.
+**Question**  
+
+Write a sum method which will work properly when invoked using either synthax below
+
+    sum(2,3)
+    sum(2)(3)
+    
+**Answer**
+
+There are at least two (2) ways to do this:
+
+Method 1:
+
+    function sum(x) {
+        if (arguments.length == 2) {
+            return arguments[0] + arguments[1]
+        } else {
+            return function(y) { return x + y }
+        }
+    }
+
+In JavaScript, functions provide access to an `arguments` object which provides access to the actual arguments passed to a function. This enables us to use the `length` property to determine at runtime the number of arguments passed to the function.
+
+If two arguments are passed, we simply add them together and return.
+
+Otherwise, we assume it was called in the form `sum(2)(3)`, so we return an anonymous function that adds together the argument passed to sum() (in this case 2) and the argument passed to the anonymous function (in this case 3).
+
+Method 2:
+
+    function sum(x, y) {
+        if (y !== undefined) {
+            return x + y
+        } else {
+            return function(y) { return x + y }
+        }
+    }
+
+When a function is invoked, JavaScript does not require the number of arguments to match the number of arguments in the function definition. If the number of arguments passed exceeds the number of arguments in the function definition, the excess arguments will simply be ignored. On the other hand, if the number of arguments passed is less than the number of arguments in the function definition, the missing arguments will have a value of `undefined` when referenced within the function. So, in the above example, by simply checking if the 2nd argument is undefined, we can determine which way the function was invoked and proceed accordingly.
 
 
 ### References
